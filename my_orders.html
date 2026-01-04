@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>هَــ عبايه</title>
+    
+    <!-- Bootstrap 5 RTL -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-white">
+
+<!-- 1. Desktop Navbar (Hidden on Mobile) -->
+<nav class="navbar-zahraah d-none d-lg-block sticky-top">
+    <div class="container-fluid px-5"> <!-- Wider container for desktop -->
+        <div class="row align-items-center">
+            
+            <!-- Right: Search Bar -->
+            <div class="col-4">
+                <form action="shop.html" method="GET" class="search-container-desktop">
+                    <input type="text" name="search" class="search-input-desktop" placeholder="ابحث عن ما تحتاجه هنا...">
+                    <button type="submit" class="search-icon-desktop">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+            </div>
+
+            <!-- Center: Logo -->
+            <div class="col-4 text-center">
+                <a href="index.html" class="brand-center-desktop">
+                    <img src="assets/images/official_logo.jpg" alt="Logo" class="main-logo-img">
+                    <div class="brand-text">
+                        هَــ عبايه                        <span>ABAYA STORE</span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Left: Icons & Login -->
+            <div class="col-4">
+                <div class="nav-left-desktop">
+                    <a href="contact.html" class="nav-item-icon">
+                        <i class="far fa-comments"></i>
+                        <span>خدمة العملاء</span>
+                    </a>
+                    
+                    <a href="#" class="nav-item-icon">
+                        <i class="far fa-heart"></i>
+                        <span>المفضلة</span>
+                    </a>
+                    
+                    <a href="cart.html" class="nav-item-icon position-relative">
+                        <i class="fas fa-shopping-bag"></i>
+                                                <span>السلة</span>
+                    </a>
+
+                                            <a href="login.html" class="btn-login-pink">تسجيل الدخول</a>
+                                    </div>
+            </div>
+            
+        </div>
+    </div>
+</nav>
+
+<!-- 2. Mobile Header (Visible Only on Mobile < 992px) -->
+<header class="mobile-header d-lg-none sticky-top">
+    <!-- Search Icon Left -->
+    <a href="shop.html" class="mobile-icon">
+        <i class="fas fa-search"></i>
+    </a>
+    
+    <!-- Logo Center -->
+    <a href="index.html" class="mobile-logo text-decoration-none">
+        <img src="assets/images/official_logo.jpg" alt="Logo" class="mobile-logo-img">
+        <span class="ms-2">هَــ عبايه</span>
+    </a>
+    
+    <!-- Notification/Bell Right -->
+    <button class="mobile-icon">
+        <i class="far fa-bell"></i>
+    </button>
+</header>
+
+<!-- 3. Mobile Bottom Navigation (Visible Only on Mobile < 992px) -->
+<nav class="bottom-nav d-lg-none">
+    <a href="index.html" class="bottom-nav-item ">
+        <i class="fas fa-home"></i> <!-- Changed from flower icon to Home based on standard apps, or match image -->
+        <span>الرئيسية</span>
+    </a>
+    
+    <a href="categories.html" class="bottom-nav-item ">
+        <i class="fas fa-th-large"></i> <!-- Categories/Shop -->
+        <span>الفئات</span>
+    </a>
+    
+    <a href="cart.html" class="bottom-nav-item position-relative ">
+        <i class="fas fa-shopping-bag"></i>
+                <span>السلة</span>
+    </a>
+    
+    <a href="#" class="bottom-nav-item">
+        <i class="far fa-heart"></i>
+        <span>المفضلة</span>
+    </a>
+    
+    <a href="login.html" class="bottom-nav-item ">
+        <i class="far fa-user"></i>
+        <span>حسابي</span>
+    </a>
+</nav>
+
+<style>
+    .orders-wrapper {
+        background: #000 !important;
+        min-height: 100vh !important;
+        direction: rtl !important;
+        font-family: 'Cairo', sans-serif !important;
+        color: #fff !important;
+    }
+    .orders-header {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        padding: 15px 20px !important;
+        background: #000 !important;
+        border-bottom: 1px solid #1a1a1a !important;
+    }
+    .order-card {
+        background: #0d0d0d !important;
+        border: 1px solid #1a1a1a !important;
+        border-radius: 15px !important;
+        padding: 20px !important;
+        margin-bottom: 15px !important;
+        transition: transform 0.2s !important;
+    }
+    .order-card:hover {
+        transform: translateY(-3px) !important;
+        border-color: #333 !important;
+    }
+    .status-badge {
+        padding: 5px 12px !important;
+        border-radius: 8px !important;
+        font-size: 0.75rem !important;
+        font-weight: 700 !important;
+    }
+</style>
+
+<div class="orders-wrapper">
+    <div class="orders-header">
+        <div style="width: 24px;"></div>
+        <h5 class="m-0 fw-bold">طلباتي</h5>
+        <a href="profile.html" style="color: #fff;"><i class="fas fa-chevron-left"></i></a>
+    </div>
+
+    <div class="container py-4">
+                    <div class="row">
+                                <div class="col-12">
+                    <div class="order-card">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <span class="text-muted small">رقم الطلب: #ORD-8801</span>
+                                                        <span class="status-badge bg-success text-white">تم التوصيل</span>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <div class="fw-bold mb-1">450.00 ر.س</div>
+                                <div class="text-muted small">02 Jan 2026</div>
+                            </div>
+                            <a href="order_view.html
+                                عرض التفاصيل
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                                <div class="col-12">
+                    <div class="order-card">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <span class="text-muted small">رقم الطلب: #ORD-8802</span>
+                                                        <span class="status-badge bg-info text-white">قيد المعالجة</span>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <div class="fw-bold mb-1">1,250.00 ر.س</div>
+                                <div class="text-muted small">04 Jan 2026</div>
+                            </div>
+                            <a href="order_view.html
+                                عرض التفاصيل
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                            </div>
+            </div>
+</div>
+
+<div style="height: 80px;"></div>
+
+<!-- Footer -->
+<footer class="bg-dark text-white pt-5 pb-3 mt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <h5 class="fw-bold mb-3 text-warning">هَــ عبايه</h5>
+                <p class="text-muted small">
+                    متجر عباية إليجانس يقدم لك أرقى وأفخم العبايات المصممة خصيصاً لتناسب ذوقك الرفيع.                </p>
+                <div class="mt-3">
+                                                                            </div>
+            </div>
+            
+            <div class="col-md-2 mb-4">
+                <h6 class="fw-bold mb-3">روابط سريعة</h6>
+                <ul class="list-unstyled small">
+                    <li class="mb-2"><a href="index.html" class="text-secondary text-decoration-none hover-white">الرئيسية</a></li>
+                    <li class="mb-2"><a href="shop.html" class="text-secondary text-decoration-none hover-white">التسوق</a></li>
+                    <li class="mb-2"><a href="#" class="text-secondary text-decoration-none hover-white">من نحن</a></li>
+                    <li class="mb-2"><a href="contact.html" class="text-secondary text-decoration-none hover-white">اتصل بنا</a></li>
+                </ul>
+            </div>
+            
+            <div class="col-md-3 mb-4">
+                <h6 class="fw-bold mb-3">تواصل معنا</h6>
+                <ul class="list-unstyled small text-secondary">
+                    <li class="mb-2"><i class="fas fa-map-marker-alt text-warning me-2"></i> المملكة العربية السعودية</li>
+                    <li class="mb-2"><i class="fas fa-phone text-warning me-2"></i> </li>
+                    <li class="mb-2"><i class="fas fa-envelope text-warning me-2"></i> </li>
+                </ul>
+            </div>
+            
+            <div class="col-md-3 mb-4">
+                <h6 class="fw-bold mb-3">النشرة البريدية</h6>
+                <p class="small text-muted">اشترك لتصلك أحدث العروض الحصرية.</p>
+                <div class="input-group mb-3">
+                    <input type="email" class="form-control form-control-sm bg-dark text-white border-secondary" placeholder="بريدك الإلكتروني">
+                    <button class="btn btn-warning btn-sm" type="button"><i class="fas fa-paper-plane"></i></button>
+                </div>
+            </div>
+        </div>
+        
+        <hr class="border-secondary my-4">
+        
+        <div class="row align-items-center">
+            <div class="col-md-6 text-center text-md-end text-muted small">
+                &copy; 2026 جميع الحقوق محفوظة لـ هَــ عبايه            </div>
+            <div class="col-md-6 text-center text-md-start">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/PayPal.svg/1200px-PayPal.svg.png" height="20" class="mx-2 opacity-50 bg-white p-1 rounded">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/1280px-Mastercard-logo.svg.png" height="20" class="mx-2 opacity-50 bg-white p-1 rounded">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/Visa_Logo.png" height="20" class="mx-2 opacity-50 bg-white p-1 rounded">
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Preloader -->
+<div id="preloader">
+    <div class="spinner-gold"></div>
+</div>
+
+<!-- Scroll To Top Button -->
+<button id="scrollTopBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+<!-- SweetAlert2 JS -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script>
+<!-- Quick View Modal Structure -->
+<div id="quickViewModal" class="qv-modal">
+    <div class="qv-content animate__animated animate__zoomIn">
+        <span class="qv-close">&times;</span>
+        
+        <!-- Right Side: Image -->
+        <div class="qv-image-side">
+            <img id="qv-img" src="" alt="Product Image">
+        </div>
+
+        <!-- Left Side: Information -->
+        <div class="qv-info-side">
+            <div class="d-flex justify-content-between align-items-start mb-2">
+                 <h2 id="qv-title" class="qv-title mb-0"></h2>
+                 <a id="qv-details-link" href="#" class="text-muted small text-decoration-none ms-2" style="white-space: nowrap;">
+                    التفاصيل <i class="fas fa-external-link-alt"></i>
+                 </a>
+            </div>
+            
+            <div id="qv-model" class="qv-model">رقم الموديل : <span id="qv-id"></span></div>
+            
+            <div id="qv-price" class="qv-price"></div>
+            
+            <div class="mb-4">
+                <span class="qv-option-label">اللون :</span>
+                <div class="d-flex gap-2">
+                    <div id="qv-color" class="qv-option-box m-0"></div>
+                </div>
+            </div>
+            
+            <div class="mb-5">
+                <span class="qv-option-label">المقاس :</span>
+                <div class="d-flex gap-2">
+                    <div class="qv-option-box m-0 active-option">مقاس واحد</div>
+                </div>
+            </div>
+            
+            <button id="qv-add-to-cart" class="qv-add-btn w-100">إضافة للسلة</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Quick View Logic
+    const qvModal = document.getElementById('quickViewModal');
+    const qvClose = document.querySelector('.qv-close');
+    
+    // Open Modal
+    document.addEventListener('click', function(e) {
+        if (e.target.closest('.quick-view-trigger')) {
+            const trigger = e.target.closest('.quick-view-trigger');
+            const productId = trigger.getAttribute('data-id');
+            openQuickView(productId);
+        }
+    });
+
+    function openQuickView(id) {
+        // Fetch product data
+        fetch('get_product_json.php?id=' + id)
+            .then(response => response.json())
+            .then(data => {
+                if (data.error) {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'عذراً',
+                        text: 'تعذر تحميل بيانات المنتج',
+                        background: '#111',
+                        color: '#fff'
+                    });
+                    return;
+                }
+                
+                // Populate Modal with App Identity
+                document.getElementById('qv-img').src = data.main_image;
+                document.getElementById('qv-title').innerText = data.name;
+                document.getElementById('qv-id').innerText = data.category_name === 'Abayas' ? 'ABY-00' + data.id : 'MOD-00' + data.id;
+                document.getElementById('qv-price').innerText = data.formatted_price;
+                document.getElementById('qv-color').innerText = data.color || 'أسود ملكي';
+                document.getElementById('qv-details-link').href = 'product.html
+                
+                // Update Add to Cart button
+                document.getElementById('qv-add-to-cart').onclick = function() {
+                    window.location.href = 'cart_action.php?add=' + data.id;
+                };
+
+                // Show Modal
+                qvModal.classList.add('show');
+                document.body.style.overflow = 'hidden'; // Prevent scroll
+            })
+            .catch(err => {
+                console.error('Quick View Error:', err);
+            });
+    }
+
+    // Close Modal
+    qvClose.onclick = function() {
+        qvModal.classList.remove('show');
+        document.body.style.overflow = 'auto';
+    }
+
+    window.onclick = function(event) {
+        if (event.target == qvModal) {
+            qvModal.classList.remove('show');
+            document.body.style.overflow = 'auto';
+        }
+    }
+</script>
+
+<script>
+    // Preloader
+    window.addEventListener('load', function() {
+        var preloader = document.getElementById('preloader');
+        preloader.style.opacity = '0';
+        setTimeout(function() {
+            preloader.style.display = 'none';
+        }, 500);
+    });
+
+    // Scroll To Top
+    var scrollTopBtn = document.getElementById("scrollTopBtn");
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (scrollTopBtn) {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollTopBtn.style.display = "block";
+            } else {
+                scrollTopBtn.style.display = "none";
+            }
+        }
+    }
+
+    if(scrollTopBtn) {
+        scrollTopBtn.onclick = function() {
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        }
+    }
+
+    // --- Drag to Scroll for Category Circles ---
+    const slider = document.querySelector('.category-circles-container');
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    if(slider) {
+        slider.addEventListener('mousedown', (e) => {
+            isDown = true;
+            slider.classList.add('active');
+            startX = e.pageX - slider.offsetLeft;
+            scrollLeft = slider.scrollLeft;
+        });
+        
+        slider.addEventListener('mouseleave', () => {
+            isDown = false;
+            slider.classList.remove('active');
+        });
+        
+        slider.addEventListener('mouseup', () => {
+            isDown = false;
+            slider.classList.remove('active');
+        });
+        
+        slider.addEventListener('mousemove', (e) => {
+            if(!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - slider.offsetLeft;
+            const walk = (x - startX) * 2; // Scroll-fast
+            slider.scrollLeft = scrollLeft - walk;
+        });
+    }
+</script>
+
+</body>
+</html>

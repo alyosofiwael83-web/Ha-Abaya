@@ -1,0 +1,8 @@
+
+.DS_Store
+Thumbs.db
+*.log
+tmp/
+.vscode/
+.idea/
+# We will include PHP files as this is the source, even if hosting is static HTML.

@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>هَــ عبايه</title>
+
+    <!-- Bootstrap 5 RTL -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body class="bg-white">
+
+    <!-- 1. Desktop Navbar (Hidden on Mobile) -->
+    <nav class="navbar-zahraah d-none d-lg-block sticky-top">
+        <div class="container-fluid px-5"> <!-- Wider container for desktop -->
+            <div class="row align-items-center">
+
+                <!-- Right: Search Bar -->
+                <div class="col-4">
+                    <form action="shop.html" method="GET" class="search-container-desktop">
+                        <input type="text" name="search" class="search-input-desktop"
+                            placeholder="ابحث عن ما تحتاجه هنا...">
+                        <button type="submit" class="search-icon-desktop">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Center: Logo -->
+                <div class="col-4 text-center">
+                    <a href="index.html" class="brand-center-desktop">
+                        <img src="assets/images/official_logo.jpg" alt="Logo" class="main-logo-img">
+                        <div class="brand-text">
+                            هَــ عبايه <span>ABAYA STORE</span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Left: Icons & Login -->
+                <div class="col-4">
+                    <div class="nav-left-desktop">
+                        <a href="contact.html" class="nav-item-icon">
+                            <i class="far fa-comments"></i>
+                            <span>خدمة العملاء</span>
+                        </a>
+
+                        <a href="#" class="nav-item-icon">
+                            <i class="far fa-heart"></i>
+                            <span>المفضلة</span>
+                        </a>
+
+                        <a href="cart.html" class="nav-item-icon position-relative">
+                            <i class="fas fa-shopping-bag"></i>
+                            <span>السلة</span>
+                        </a>
+
+                        <a href="login.html" class="btn-login-pink">تسجيل الدخول</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- 2. Mobile Header (Visible Only on Mobile < 992px) -->
+    <header class="mobile-header d-lg-none sticky-top">
+        <!-- Search Icon Left -->
+        <a href="shop.html" class="mobile-icon">
+            <i class="fas fa-search"></i>
+        </a>
+
+        <!-- Logo Center -->
+        <a href="index.html" class="mobile-logo text-decoration-none">
+            <img src="assets/images/official_logo.jpg" alt="Logo" class="mobile-logo-img">
+            <span class="ms-2">هَــ عبايه</span>
+        </a>
+
+        <!-- Notification/Bell Right -->
+        <button class="mobile-icon">
+            <i class="far fa-bell"></i>
+        </button>
+    </header>
+
+    <!-- 3. Mobile Bottom Navigation (Visible Only on Mobile < 992px) -->
+    <nav class="bottom-nav d-lg-none">
+        <a href="index.html" class="bottom-nav-item active">
+            <i class="fas fa-home"></i> <!-- Changed from flower icon to Home based on standard apps, or match image -->
+            <span>الرئيسية</span>
+        </a>
+
+        <a href="categories.html" class="bottom-nav-item ">
+            <i class="fas fa-th-large"></i> <!-- Categories/Shop -->
+            <span>الفئات</span>
+        </a>
+
+        <a href="cart.html" class="bottom-nav-item position-relative ">
+            <i class="fas fa-shopping-bag"></i>
+            <span>السلة</span>
+        </a>
+
+        <a href="#" class="bottom-nav-item">
+            <i class="far fa-heart"></i>
+            <span>المفضلة</span>
+        </a>
+
+        <a href="login.html" class="bottom-nav-item ">
+            <i class="far fa-user"></i>
+            <span>حسابي</span>
+        </a>
+    </nav>
+
+    <!-- 1. Category Circles Section (Story Style) -->
+    <section class="category-circles-wrapper border-bottom mb-4">
+        <div class="container container-custom">
+            <div class="category-circles-container">
+                <!-- Add a static "All" or "New" circle if desired, or just DB categories -->
+                <a href="shop.html" class="cat-circle-item">
+                    <div class="cat-circle-img d-flex align-items-center justify-content-center bg-dark text-white">
+                        <i class="fas fa-th-large fa-2x"></i>
+                    </div>
+                    <span class="cat-circle-name">الكل</span>
+                </a>
+
+                <a href="shop.html" class="cat-circle-item">
+                    <img src="assets/images/abayas/6957eca57781a.jpeg" alt="عبايات يومية" class="cat-circle-img">
+                    <span class="cat-circle-name">عبايات يومية</span>
+                </a>
+                <a href="shop.html" class="cat-circle-item">
+                    <img src="assets/images/abayas/6957ecafdbe1b.jpeg" alt="عبايات مناسبات" class="cat-circle-img">
+                    <span class="cat-circle-name">عبايات مناسبات</span>
+                </a>
+                <a href="shop.html" class="cat-circle-item">
+                    <img src="assets/images/categories/6957ef00c205f.jpeg" alt="عبايات شتوية" class="cat-circle-img">
+                    <span class="cat-circle-name">عبايات شتوية</span>
+                </a>
+                <a href="shop.html" class="cat-circle-item">
+                    <img src="assets/images/categories/6957ef073ac5e.jpeg" alt="طرح ونقابات" class="cat-circle-img">
+                    <span class="cat-circle-name">طرح ونقابات</span>
+                </a>
+                <a href="shop.html" class="cat-circle-item">
+                    <img src="assets/images/abayas/6957ecafdbe1b.jpeg" alt="اطقم كاملة" class="cat-circle-img">
+                    <span class="cat-circle-name">اطقم كاملة</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. Hero Ads Slider Section -->
+    <section class="hero-slider-section mb-5">
+        <div class="swiper adsSwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide hero-slide"
+                    style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('assets/images/abayas/6957ece406177.jpeg');">
+                    <div class="container h-100 d-flex align-items-center justify-content-center text-center">
+                        <div class="slide-content text-white">
+                            <h1 class="display-3 fw-bold mb-3 animate-text">تشكيلة الفخامة 2026</h1>
+                            <p class="lead mb-4 animate-text">اكتشفي أحدث تصاميم العبايات الفاخرة، أناقة لا
+                                تضاهى لكل مناسباتك.</p>
+                            <a href="product.html">
+                        </div>
+                    </div>
+                </div>
+                <div class=" swiper-slide hero-slide"
+                    style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('assets/images/abayas/6957ecafdbe1b.jpeg');">
+                    <div class="container h-100 d-flex align-items-center justify-content-center text-center">
+                        <div class="slide-content text-white">
+                            <h1 class="display-3 fw-bold mb-3 animate-text">أناقة الشتاء</h1>
+                            <p class="lead mb-4 animate-text">دفء وفخامة في تصاميمنا الجديدة لموسم الشتاء.
+                            </p>
+                            <a href="product.html">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Pagination & Navigation -->
+            <div class=" swiper-pagination">
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </section>
+
+
+
+    <!-- 3. New Arrivals (Swiper for beautiful scrolling) -->
+    <section class="py-4">
+        <div class="container-fluid px-3 px-md-5">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <a href="shop.html"
+                    class="text-white text-decoration-none small border-bottom border-secondary pb-1">عرض الكل</a>
+                <h5 class="fw-bold mb-0">الأكثر مبيعاً</h5>
+            </div>
+
+            <div class="swiper productSwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide px-2">
+                        <div class="product-card shadow-sm rounded-4 overflow-hidden"
+                            style="background: #0a0a0a; border: 1px solid #1a1a1a;">
+                            <div class="product-img-wrapper" style="height: 260px;">
+                                <a href="product.html"> <img src=" assets/images/products/abaya_emb_main.jpg"
+                                        alt="عباية سوداء تطريز ذهبي">
+                                </a>
+                                <div class="product-like-icon"><i class="far fa-heart"></i></div>
+                                <div class="product-bag-icon quick-view-trigger cursor-pointer" data-id="101">
+                                    <i class="fas fa-shopping-bag"></i>
+                                </div>
+                            </div>
+                            <div class="card-body p-3">
+                                <div class="product-title text-white mb-1">عباية سوداء تطريز ذهبي</div>
+                                <div class="product-price text-primary">
+                                    350 ر.س
+                                    <span class="old-price small ms-2"
+                                        style="color: #666; text-decoration: line-through;">450 ر.س</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide px-2">
+                        <div class="product-card shadow-sm rounded-4 overflow-hidden"
+                            style="background: #0a0a0a; border: 1px solid #1a1a1a;">
+                            <div class="product-img-wrapper" style="height: 260px;">
+                                <a href="product.html"> <img src=" assets/images/abayas/6957eca57781a.jpeg"
+                                        alt="عباية كلوش كلاسيك">
+                                </a>
+                                <div class="product-like-icon"><i class="far fa-heart"></i></div>
+                                <div class="product-bag-icon quick-view-trigger cursor-pointer" data-id="102">
+                                    <i class="fas fa-shopping-bag"></i>
+                                </div>
+                            </div>
+                            <div class="card-body p-3">
+                                <div class="product-title text-white mb-1">عباية كلوش كلاسيك</div>
+                                <div class="product-price text-primary">
+                                    290 ر.س
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide px-2">
+                        <div class="product-card shadow-sm rounded-4 overflow-hidden"
+                            style="background: #0a0a0a; border: 1px solid #1a1a1a;">
+                            <div class="product-img-wrapper" style="height: 260px;">
+                                <a href="product.html"> <img src=" assets/images/abayas/6957ecafdbe1b.jpeg"
+                                        alt="عباية مخمل شتوية">
+                                </a>
+                                <div class="product-like-icon"><i class="far fa-heart"></i></div>
+                                <div class="product-bag-icon quick-view-trigger cursor-pointer" data-id="103">
+                                    <i class="fas fa-shopping-bag"></i>
+                                </div>
+                            </div>
+                            <div class="card-body p-3">
+                                <div class="product-title text-white mb-1">عباية مخمل شتوية</div>
+                                <div class="product-price text-primary">
+                                    420 ر.س
+                                    <span class="old-price small ms-2"
+                                        style="color: #666; text-decoration: line-through;">500 ر.س</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide px-2">
+                        <div class="product-card shadow-sm rounded-4 overflow-hidden"
+                            style="background: #0a0a0a; border: 1px solid #1a1a1a;">
+                            <div class="product-img-wrapper" style="height: 260px;">
+                                <a href="product.html"> <img src=" assets/images/abayas/6957eccb21b9f.jpeg"
+                                        alt="عباية لينن صيفي">
+                                </a>
+                                <div class="product-like-icon"><i class="far fa-heart"></i></div>
+                                <div class="product-bag-icon quick-view-trigger cursor-pointer" data-id="104">
+                                    <i class="fas fa-shopping-bag"></i>
+                                </div>
+                            </div>
+                            <div class="card-body p-3">
+                                <div class="product-title text-white mb-1">عباية لينن صيفي</div>
+                                <div class="product-price text-primary">
+                                    250 ر.س
+                                    <span class="old-price small ms-2"
+                                        style="color: #666; text-decoration: line-through;">300 ر.س</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide px-2">
+                        <div class="product-card shadow-sm rounded-4 overflow-hidden"
+                            style="background: #0a0a0a; border: 1px solid #1a1a1a;">
+                            <div class="product-img-wrapper" style="height: 260px;">
+                                <a href="product.html"> <img src=" assets/images/abayas/6957ecd26adaf.jpeg"
+                                        alt="عباية رأس فاخرة">
+                                </a>
+                                <div class="product-like-icon"><i class="far fa-heart"></i></div>
+                                <div class="product-bag-icon quick-view-trigger cursor-pointer" data-id="105">
+                                    <i class="fas fa-shopping-bag"></i>
+                                </div>
+                            </div>
+                            <div class="card-body p-3">
+                                <div class="product-title text-white mb-1">عباية رأس فاخرة</div>
+                                <div class="product-price text-primary">
+                                    180 ر.س
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Pagination -->
+                <div class="swiper-pagination position-relative mt-4"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Wide Banners Section (Premium Abaya Collections) -->
+    <section class="mb-4">
+        <div class="container-fluid px-0">
+            <!-- Banner 1: Winter/Modern Abayas -->
+            <div class="position-relative mb-2 overflow-hidden shadow-sm" style="height: 250px;">
+                <img src="https://images.unsplash.com/photo-1622345511059-4f7f631bc0d6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+                    class="w-100 h-100 object-fit-cover" alt="Winter Collection">
+                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center"
+                    style="background: rgba(0,0,0,0.35);">
+                    <div class="text-center px-3">
+                        <h2 class="fw-bold text-white mb-2"
+                            style="font-size: 2.2rem; text-shadow: 2px 2px 10px rgba(0,0,0,0.5);">عبايات شتوية</h2>
+                        <a href="shop.html" class="btn btn-outline-light rounded-pill px-5 py-2 fw-bold"
+                            style="border-width: 2px;">اكتشفي الآن</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Banner 2: Classic/Official Abayas -->
+            <div class="position-relative overflow-hidden shadow-sm" style="height: 250px;">
+                <img src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+                    class="w-100 h-100 object-fit-cover" alt="Classic Collection">
+                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center"
+                    style="background: rgba(0,0,0,0.35);">
+                    <div class="text-center px-3">
+                        <h2 class="fw-bold text-white mb-2"
+                            style="font-size: 2.2rem; text-shadow: 2px 2px 10px rgba(0,0,0,0.5);">عبايات مناسبات</h2>
+                        <a href="shop.html" class="btn btn-outline-light rounded-pill px-5 py-2 fw-bold"
+                            style="border-width: 2px;">اكتشفي الآن</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Second Product Strip (Swiper for Recommendations) -->
+    <section class="py-4 mb-5">
+        <div class="container-fluid px-3 px-md-5">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <a href="shop.html"
+                    class="text-white text-decoration-none small border-bottom border-secondary pb-1">عرض الكل</a>
+                <h5 class="fw-bold mb-0">منتجات قد تعجبك</h5>
+            </div>
+
+            <div class="swiper productSwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide px-2">
+                        <div class="product-card shadow-sm rounded-4 overflow-hidden"
+                            style="background: #0a0a0a; border: 1px solid #1a1a1a;">
+                            <div class="product-img-wrapper" style="height: 260px;">
+                                <a href="product.html"> <img src=" assets/images/abayas/6957ecd26adaf.jpeg"
+                                        alt="عباية رأس فاخرة">
+                                </a>
+                                <div class="product-like-icon"><i class="far fa-heart"></i></div>
+                                <div class="product-bag-icon quick-view-trigger cursor-pointer" data-id="105">
+                                    <i class="fas fa-shopping-bag"></i>
+                                </div>
+                            </div>
+                            <div class="card-body p-3">
+                                <div class="product-title text-white mb-1">عباية رأس فاخرة</div>
+                                <div class="product-price text-primary">180 ر.س</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide px-2">
+                        <div class="product-card shadow-sm rounded-4 overflow-hidden"
+                            style="background: #0a0a0a; border: 1px solid #1a1a1a;">
+                            <div class="product-img-wrapper" style="height: 260px;">
+                                <a href="product.html"> <img src=" assets/images/abayas/6957eccb21b9f.jpeg"
+                                        alt="عباية لينن صيفي">
+                                </a>
+                                <div class="product-like-icon"><i class="far fa-heart"></i></div>
+                                <div class="product-bag-icon quick-view-trigger cursor-pointer" data-id="104">
+                                    <i class="fas fa-shopping-bag"></i>
+                                </div>
+                            </div>
+                            <div class="card-body p-3">
+                                <div class="product-title text-white mb-1">عباية لينن صيفي</div>
+                                <div class="product-price text-primary">250 ر.س</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide px-2">
+                        <div class="product-card shadow-sm rounded-4 overflow-hidden"
+                            style="background: #0a0a0a; border: 1px solid #1a1a1a;">
+                            <div class="product-img-wrapper" style="height: 260px;">
+                                <a href="product.html"> <img src=" assets/images/abayas/6957ecafdbe1b.jpeg"
+                                        alt="عباية مخمل شتوية">
+                                </a>
+                                <div class="product-like-icon"><i class="far fa-heart"></i></div>
+                                <div class="product-bag-icon quick-view-trigger cursor-pointer" data-id="103">
+                                    <i class="fas fa-shopping-bag"></i>
+                                </div>
+                            </div>
+                            <div class="card-body p-3">
+                                <div class="product-title text-white mb-1">عباية مخمل شتوية</div>
+                                <div class="product-price text-primary">420 ر.س</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide px-2">
+                        <div class="product-card shadow-sm rounded-4 overflow-hidden"
+                            style="background: #0a0a0a; border: 1px solid #1a1a1a;">
+                            <div class="product-img-wrapper" style="height: 260px;">
+                                <a href="product.html"> <img src=" assets/images/abayas/6957eca57781a.jpeg"
+                                        alt="عباية كلوش كلاسيك">
+                                </a>
+                                <div class="product-like-icon"><i class="far fa-heart"></i></div>
+                                <div class="product-bag-icon quick-view-trigger cursor-pointer" data-id="102">
+                                    <i class="fas fa-shopping-bag"></i>
+                                </div>
+                            </div>
+                            <div class="card-body p-3">
+                                <div class="product-title text-white mb-1">عباية كلوش كلاسيك</div>
+                                <div class="product-price text-primary">290 ر.س</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide px-2">
+                        <div class="product-card shadow-sm rounded-4 overflow-hidden"
+                            style="background: #0a0a0a; border: 1px solid #1a1a1a;">
+                            <div class="product-img-wrapper" style="height: 260px;">
+                                <a href="product.html"> <img src=" assets/images/products/abaya_emb_main.jpg"
+                                        alt="عباية سوداء تطريز ذهبي">
+                                </a>
+                                <div class="product-like-icon"><i class="far fa-heart"></i></div>
+                                <div class="product-bag-icon quick-view-trigger cursor-pointer" data-id="101">
+                                    <i class="fas fa-shopping-bag"></i>
+                                </div>
+                            </div>
+                            <div class="card-body p-3">
+                                <div class="product-title text-white mb-1">عباية سوداء تطريز ذهبي</div>
+                                <div class="product-price text-primary">350 ر.س</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Pagination -->
+                <div class="swiper-pagination position-relative mt-4"></div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // 1. Hero Ads Slider
+            var adsSwiper = new Swiper(".adsSwiper", {
+                loop: true,
+                autoplay: {
+                    delay: 4000,
+                    disableOnInteraction: false,
+                },
+                effect: "fade",
+                fadeEffect: {
+                    crossFade: true
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+            });
+
+            // 2. Product Horizontal Swipers
+            var productSwipers = new Swiper(".productSwiper", {
+                slidesPerView: 2.2,
+                spaceBetween: 12,
+                freeMode: true,
+                grabCursor: true,
+                breakpoints: {
+                    // when window width is >= 768px
+                    768: {
+                        slidesPerView: 4,
+                        spaceBetween: 20
+                    },
+                    // when window width is >= 1200px
+                    1200: {
+                        slidesPerView: 5,
+                        spaceBetween: 25
+                    }
+                }
+            });
+        });
+    </script>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white pt-5 pb-3 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5 class="fw-bold mb-3 text-warning">هَــ عبايه</h5>
+                    <p class="text-muted small">
+                        متجر عباية إليجانس يقدم لك أرقى وأفخم العبايات المصممة خصيصاً لتناسب ذوقك الرفيع. </p>
+                    <div class="mt-3">
+                    </div>
+                </div>
+
+                <div class="col-md-2 mb-4">
+                    <h6 class="fw-bold mb-3">روابط سريعة</h6>
+                    <ul class="list-unstyled small">
+                        <li class="mb-2"><a href="index.html"
+                                class="text-secondary text-decoration-none hover-white">الرئيسية</a></li>
+                        <li class="mb-2"><a href="shop.html"
+                                class="text-secondary text-decoration-none hover-white">التسوق</a></li>
+                        <li class="mb-2"><a href="#" class="text-secondary text-decoration-none hover-white">من نحن</a>
+                        </li>
+                        <li class="mb-2"><a href="contact.html"
+                                class="text-secondary text-decoration-none hover-white">اتصل بنا</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-3 mb-4">
+                    <h6 class="fw-bold mb-3">تواصل معنا</h6>
+                    <ul class="list-unstyled small text-secondary">
+                        <li class="mb-2"><i class="fas fa-map-marker-alt text-warning me-2"></i> المملكة العربية
+                            السعودية</li>
+                        <li class="mb-2"><i class="fas fa-phone text-warning me-2"></i> </li>
+                        <li class="mb-2"><i class="fas fa-envelope text-warning me-2"></i> </li>
+                    </ul>
+                </div>
+
+                <div class="col-md-3 mb-4">
+                    <h6 class="fw-bold mb-3">النشرة البريدية</h6>
+                    <p class="small text-muted">اشترك لتصلك أحدث العروض الحصرية.</p>
+                    <div class="input-group mb-3">
+                        <input type="email" class="form-control form-control-sm bg-dark text-white border-secondary"
+                            placeholder="بريدك الإلكتروني">
+                        <button class="btn btn-warning btn-sm" type="button"><i class="fas fa-paper-plane"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="border-secondary my-4">
+
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-end text-muted small">
+                    &copy; 2026 جميع الحقوق محفوظة لـ هَــ عبايه </div>
+                <div class="col-md-6 text-center text-md-start">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/PayPal.svg/1200px-PayPal.svg.png"
+                        height="20" class="mx-2 opacity-50 bg-white p-1 rounded">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/1280px-Mastercard-logo.svg.png"
+                        height="20" class="mx-2 opacity-50 bg-white p-1 rounded">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/Visa_Logo.png" height="20"
+                        class="mx-2 opacity-50 bg-white p-1 rounded">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="spinner-gold"></div>
+    </div>
+
+    <!-- Scroll To Top Button -->
+    <button id="scrollTopBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <!-- SweetAlert2 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script>
+<!-- Quick View Modal Structure -->
+    <div id="quickViewModal" class="qv-modal">
+        <div class="qv-content animate__animated animate__zoomIn">
+            <span class="qv-close">&times;</span>
+
+            <!-- Right Side: Image -->
+            <div class="qv-image-side">
+                <img id="qv-img" src="" alt="Product Image">
+            </div>
+
+            <!-- Left Side: Information -->
+            <div class="qv-info-side">
+                <div class="d-flex justify-content-between align-items-start mb-2">
+                    <h2 id="qv-title" class="qv-title mb-0"></h2>
+                    <a id="qv-details-link" href="#" class="text-muted small text-decoration-none ms-2"
+                        style="white-space: nowrap;">
+                        التفاصيل <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+
+                <div id="qv-model" class="qv-model">رقم الموديل : <span id="qv-id"></span></div>
+
+                <div id="qv-price" class="qv-price"></div>
+
+                <div class="mb-4">
+                    <span class="qv-option-label">اللون :</span>
+                    <div class="d-flex gap-2">
+                        <div id="qv-color" class="qv-option-box m-0"></div>
+                    </div>
+                </div>
+
+                <div class="mb-5">
+                    <span class="qv-option-label">المقاس :</span>
+                    <div class="d-flex gap-2">
+                        <div class="qv-option-box m-0 active-option">مقاس واحد</div>
+                    </div>
+                </div>
+
+                <button id="qv-add-to-cart" class="qv-add-btn w-100">إضافة للسلة</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    // Quick View Logic
+    const qvModal = document.getElementById('quickViewModal');
+    const qvClose = document.querySelector('.qv-close');
+    
+    // Open Modal
+    document.addEventListener('click', function(e) {
+        if (e.target.closest('.quick-view-trigger')) {
+            const trigger = e.target.closest('.quick-view-trigger');
+            const productId = trigger.getAttribute('data-id');
+            openQuickView(productId);
+        }
+    });
+
+    function openQuickView(id) {
+        // Fetch product data
+        fetch('get_product_json.php?id=' + id)
+            .then(response => response.json())
+            .then(data => {
+                if (data.error) {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'عذراً',
+                        text: 'تعذر تحميل بيانات المنتج',
+                        background: '#111',
+                        color: '#fff'
+                    });
+                    return;
+                }
+                
+                // Populate Modal with App Identity
+                document.getElementById('qv-img').src = data.main_image;
+                document.getElementById('qv-title').innerText = data.name;
+                document.getElementById('qv-id').innerText = data.category_name === 'Abayas' ? 'ABY-00' + data.id : 'MOD-00' + data.id;
+                document.getElementById('qv-price').innerText = data.formatted_price;
+                document.getElementById('qv-color').innerText = data.color || 'أسود ملكي';
+                document.getElementById('qv-details-link').href = 'product.html
+                
+                // Update Add to Cart button
+                document.getElementById('qv-add-to-cart').onclick = function() {
+                    window.location.href = 'cart_action.php?add=' + data.id;
+                };
+
+                // Show Modal
+                qvModal.classList.add('show');
+                document.body.style.overflow = 'hidden'; // Prevent scroll
+            })
+            .catch(err => {
+                console.error('Quick View Error:', err);
+            });
+    }
+
+    // Close Modal
+    qvClose.onclick = function() {
+        qvModal.classList.remove('show');
+        document.body.style.overflow = 'auto';
+    }
+
+    window.onclick = function(event) {
+        if (event.target == qvModal) {
+            qvModal.classList.remove('show');
+            document.body.style.overflow = 'auto';
+        }
+    }
+    </script>
+
+    <script>
+    // Preloader
+    window.addEventListener('load', function() {
+        var preloader = document.getElementById('preloader');
+        preloader.style.opacity = '0';
+        setTimeout(function() {
+            preloader.style.display = 'none';
+        }, 500);
+    });
+
+    // Scroll To Top
+    var scrollTopBtn = document.getElementById("scrollTopBtn");
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (scrollTopBtn) {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollTopBtn.style.display = "block";
+            } else {
+                scrollTopBtn.style.display = "none";
+            }
+        }
+    }
+
+    if(scrollTopBtn) {
+        scrollTopBtn.onclick = function() {
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        }
+    }
+
+    // --- Drag to Scroll for Category Circles ---
+    const slider = document.querySelector('.category-circles-container');
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    if(slider) {
+        slider.addEventListener('mousedown', (e) => {
+            isDown = true;
+            slider.classList.add('active');
+            startX = e.pageX - slider.offsetLeft;
+            scrollLeft = slider.scrollLeft;
+        });
+        
+        slider.addEventListener('mouseleave', () => {
+            isDown = false;
+            slider.classList.remove('active');
+        });
+        
+        slider.addEventListener('mouseup', () => {
+            isDown = false;
+            slider.classList.remove('active');
+        });
+        
+        slider.addEventListener('mousemove', (e) => {
+            if(!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - slider.offsetLeft;
+            const walk = (x - startX) * 2; // Scroll-fast
+            slider.scrollLeft = scrollLeft - walk;
+        });
+    }
+    </script>
+
+</body>
+
+</html>
