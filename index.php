@@ -180,27 +180,9 @@ $hero_abayas = [
 <!-- 4. Wide Banners Section (Premium Abaya Collections) -->
 <section class="mb-4">
     <div class="container-fluid px-0">
-        <!-- Banner 1: Winter/Modern Abayas -->
-        <div class="position-relative mb-2 overflow-hidden shadow-sm" style="height: 250px;">
-             <img src="https://images.unsplash.com/photo-1622345511059-4f7f631bc0d6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" class="w-100 h-100 object-fit-cover" alt="Winter Collection">
-             <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center" style="background: rgba(0,0,0,0.35);">
-                <div class="text-center px-3">
-                    <h2 class="fw-bold text-white mb-2" style="font-size: 2.2rem; text-shadow: 2px 2px 10px rgba(0,0,0,0.5);">عبايات شتوية</h2>
-                    <a href="shop.php" class="btn btn-outline-light rounded-pill px-5 py-2 fw-bold" style="border-width: 2px;">اكتشفي الآن</a>
-                </div>
-             </div>
-        </div>
+
         
-        <!-- Banner 2: Classic/Official Abayas -->
-        <div class="position-relative overflow-hidden shadow-sm" style="height: 250px;">
-             <img src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" class="w-100 h-100 object-fit-cover" alt="Classic Collection">
-             <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center" style="background: rgba(0,0,0,0.35);">
-                <div class="text-center px-3">
-                    <h2 class="fw-bold text-white mb-2" style="font-size: 2.2rem; text-shadow: 2px 2px 10px rgba(0,0,0,0.5);">عبايات مناسبات</h2>
-                    <a href="shop.php" class="btn btn-outline-light rounded-pill px-5 py-2 fw-bold" style="border-width: 2px;">اكتشفي الآن</a>
-                </div>
-             </div>
-        </div>
+
     </div>
 </section>
 
