@@ -6,7 +6,6 @@ include 'includes/public_header.php';
 // 1. Categories
 $categories = [
     ['id' => 1, 'name' => 'عبايات يومية', 'image' => 'assets/images/abayas/6957eccb21b9f.jpeg'], 
-    ['id' => 2, 'name' => 'عبايات مناسبات', 'image' => 'assets/images/categories/6957eef8e076d.jpeg'],
     ['id' => 3, 'name' => 'عبايات شتوية', 'image' => 'assets/images/categories/6957ef00c205f.jpeg'],
     ['id' => 4, 'name' => 'طرح ونقابات', 'image' => 'assets/images/categories/6957ef073ac5e.jpeg'],
     ['id' => 5, 'name' => 'اطقم كاملة', 'image' => 'assets/images/abayas/6957ecafdbe1b.jpeg']
